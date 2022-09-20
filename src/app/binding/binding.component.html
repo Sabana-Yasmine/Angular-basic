@@ -1,0 +1,83 @@
+<!--------------------------String Interpolation--------------------------->
+
+<div class="d-none">
+    <div class ="container">
+        <h1>{{ title }}</h1>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-text">String Interpolation</h4>
+                <ul>
+                    <li>{{product.name}}</li>
+                    <li>{{product.price}}</li>
+                    <li>{{product.Quantity}}</li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!----------------------Property Binding------------------------------------>
+
+<div class="d-none">
+    <div class="container mt-5">
+        <h1>Property Binding</h1>
+        <button class="btn btn-primary mt-5 w-25" [disabled]=""btnstatus>Button</button>
+    </div>
+</div>
+
+<!--------------------------Event Binding----------------------------------->
+
+<div class="d-none">
+    <div class="container mt-5 w-25">
+        <h1>{{title}}</h1>
+        <button class = "btn btn-outline-success" (click)="event()">change</button>
+        
+    </div>
+</div>
+
+<!-------------------------Two-way Binding-------------------------------------->
+<div class="d-none">
+<div class="container">
+    <div>
+        <h2>welcome  {{username}}</h2>
+        <form>
+            <input type="text" name="username" [(ngModel)]="username"/>
+        </form>
+    </div>
+</div>
+</div>
+
+<!----------------------property vs interpolation----------------------------->
+
+<div class="container">
+    <div class="card w-50 mb-5 p-5">
+        <div class="card-header">
+            <h1>Interpolation</h1>
+        </div>
+        <form>
+            <input
+              type="email"
+              value="{{email}}"
+              class ="form-control"
+              disabled ="{{inputstatus}}"
+              />
+              <button class="btn btn-primary mt-4" (click)="enable()">Enable</button>
+        </form>
+    </div>
+      
+    <div class="card w-50 mb-5 p-5">
+        <div class="card-header">
+            <h1>Property Binding</h1>
+        </div>
+        <form>
+            <input
+              type="email"
+              value="{{email}}"
+              class ="form-control"
+              disabled ="{{inputstatus}}"
+              />
+              <button class="btn btn-primary mt-4" (click)="enable()">Enable</button>
+        </form>
+    </div>
+</div>

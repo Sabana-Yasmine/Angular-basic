@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "import 'bootstrap/dist/css/bootstrap.min.css"
+              "bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
