@@ -1,0 +1,40 @@
+<h1>Directives - Demo</h1>
+<div class="container mt-5 w-25">
+<div *ngIf="isAdmin; 
+   then thenblock
+   else elseblock">
+</div>
+
+<ng-template #thenblock>
+    <h2>Admin can access</h2>
+</ng-template>
+
+<ng-template #elseblock>
+    <h2>User cannot have any access</h2>
+</ng-template>
+</div>
+
+<div class="container mt-5 w-25">
+<div *ngFor="let std of student; index as i">
+   <h3> <li>{{i+1}} {{std.name}} {{std.class}} </li> </h3>
+</div>
+</div>
+
+<div class="container mt-5 w-25">
+    <div *ngFor="let std of student">
+        <div [ngSwitch] = "std.class">
+            
+            <div *ngSwitchCase = "'10-A'">
+                <h2>Students in section A</h2>
+                <h3> <li>{{std.name}}</li></h3>
+            </div>
+            
+            <div *ngSwitchDefault>
+                <h2>Students in section B</h2>
+                <h3><li>{{std.name}}</li></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
