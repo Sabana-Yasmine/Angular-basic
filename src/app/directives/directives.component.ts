@@ -13,28 +13,42 @@ export class DirectivesComponent implements OnInit {
   student =[
     {
       name : "Sabana",
-      class : "10-A",
-      rollno : 10,
+      class : 10,
+      rollno : 31,
+      result : "pass"
     },
     {
       name : "Yasmine",
-      class : "10-B",
-      rollno : 10,
+      class : 10,
+      rollno : 32,
+      result : "fail"
     },
     {
       name : "Mizla",
-      class : "10-A",
-      rollno : 11,
+      class : 12,
+      rollno : 41,
+      result :  "pass"
     },
     {
       name : "Imama",
-      class : "10-B",
-      rollno : 11,
+      class : 12,
+      rollno : 42,
+      result : "fail"
     },
     
   ]
 
   constructor() { }
+
+  highlightcolor="white"
+  highlight(color:string){
+    this.highlightcolor=color
+  }
+
+  click="underline"
+  clickhere(){
+    this.click="none"
+  }
 
   ngOnInit(): void {
   }

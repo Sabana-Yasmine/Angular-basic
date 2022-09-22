@@ -1,0 +1,18 @@
+.pass{
+    color: green;
+}
+.fail{
+    color: red;
+}
+.red{
+    color: white;
+    background-color: red;
+}
+.green-color{
+    color: white;
+    background-color: green;
+}
+.blue{
+    color: white;
+    background-color: blue;
+}

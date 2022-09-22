@@ -1,4 +1,7 @@
-<h1>Directives - Demo</h1>
+<h5>Directives - Demo</h5>
+
+<!--ngIf-->
+
 <div class="container mt-5 w-25">
 <div *ngIf="isAdmin; 
    then thenblock
@@ -6,35 +9,61 @@
 </div>
 
 <ng-template #thenblock>
-    <h2>Admin can access</h2>
+    <h4>Admin can access</h4>
 </ng-template>
 
 <ng-template #elseblock>
-    <h2>User cannot have any access</h2>
+    <h4>User cannot have any access</h4>
 </ng-template>
 </div>
 
+<!--ngFor-->
+
 <div class="container mt-5 w-25">
 <div *ngFor="let std of student; index as i">
-   <h3> <li>{{i+1}} {{std.name}} {{std.class}} </li> </h3>
+  <li>{{i+1}} {{std.name}} {{std.class}}  </li> 
 </div>
 </div>
 
+<!--ngSwitchCase-->
+
 <div class="container mt-5 w-25">
+    <h6> 12th std students</h6>
     <div *ngFor="let std of student">
         <div [ngSwitch] = "std.class">
             
-            <div *ngSwitchCase = "'10-A'">
-                <h2>Students in section A</h2>
-                <h3> <li>{{std.name}}</li></h3>
-            </div>
-            
-            <div *ngSwitchDefault>
-                <h2>Students in section B</h2>
-                <h3><li>{{std.name}}</li></h3>
+            <div *ngSwitchCase = "'12'">
+                
+                 <li>{{std.name}}  </li>
             </div>
         </div>
     </div>
 </div>
 
+<!--ngClass-->
+
+<div class="container mt-5 w-25">
+    <h6>ngClass - Examples</h6>
+    <div  *ngFor="let std of student"
+        [ngClass]="{'pass':std.result==='pass','fail': std.result==='fail'}">
+        <li>{{std.name}} - {{std.result}}</li>
+    </div>
+</div>
+
+<div class="container mt-5 w-25">
+    <div c0l="md-12" [ngClass]="{red:highlightcolor ==='red', 'green-color':highlightcolor === 'green',
+blue:highlightcolor === 'blue'}" [ngStyle]="{'tex-decoration':'underline'}">Click here</div>
+    <div c0l="md-12">
+        <button class="btn btn-danger" (click)="highlight('red')">red</button><br>
+        <button class="btn btn-success" (click)="highlight('green')">green</button><br>
+        <button class="btn btn-primary" (click)="highlight('blue')">blue</button>
+    </div>
+</div>
+
+<div class="container mt-5 w-25">
+    <div *ngFor="let std of student; index as i" [ngStyle]="{'tex-decoration':'underline'}">
+      <li [ngStyle]="{'text-decoration':click}">{{std.name}}</li> 
+    </div>
+    <button (click)="clickhere()">Toggle</button>
+    </div>
 
