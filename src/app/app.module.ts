@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BindingComponent } from './binding/binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { SampleComponent } from './sample/sample.component';
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { DirectivesComponent } from './directives/directives.component';
     AppComponent,
     LoginComponent,
     BindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    SampleComponent   
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

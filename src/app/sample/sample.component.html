@@ -1,0 +1,32 @@
+<div className="mt-5 w-50">
+    <h5>From Sample Component</h5>
+    <h6>{{sample.count}}</h6>
+<button  class="btn btn-primary" (click)="increase()">Click Here</button>
+</div>
+
+<div className= "mt-5 w-50">
+    <button type="button" class="btn btn-primary" (click)="getProd()">Get Products</button>
+</div>
+
+<div className= "mt-5 w-50">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Category</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of productDetails">
+            <tr>
+                <th scope="row">1</th>
+                <td>{{data.productCategory}}</td>
+                <td>{{data.productName}}</td>
+                <td>{{data.quantity}}</td>
+                <td>{{data.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
