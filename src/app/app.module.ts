@@ -7,7 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { BindingComponent } from './binding/binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SampleComponent } from './sample/sample.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component'
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http'
     LoginComponent,
     BindingComponent,
     DirectivesComponent,
-    SampleComponent   
+    SampleComponent,
+    LogoutComponent   
   ],
   imports: [
     BrowserModule,

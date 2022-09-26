@@ -10,6 +10,14 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("LOGIN STATUS from LOGIN",localStorage.getItem('status'))
+  }
+
+  login(){
+   localStorage.setItem('status',"true");
+   window.location.reload()
+
+   
   }
 
 }

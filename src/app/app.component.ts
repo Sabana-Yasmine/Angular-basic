@@ -11,4 +11,11 @@ export class AppComponent {
   constructor(public sample : SampleService){
     
   }
+  Login : any ='false'
+
+  ngOInit()
+  {
+this.Login = localStorage.getItem('status')
+console.log("LOGIN STATUS from APP",localStorage.getItem('status'))
+  }
 }
