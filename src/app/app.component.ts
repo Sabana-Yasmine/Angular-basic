@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SampleService } from './service/sample.service';
 
 @Component({
@@ -6,14 +6,14 @@ import { SampleService } from './service/sample.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'my-app';
   constructor(public sample : SampleService){
     
   }
   Login : any ='false'
 
-  ngOInit()
+  ngOnInit()
   {
 this.Login = localStorage.getItem('status')
 console.log("LOGIN STATUS from APP",localStorage.getItem('status'))
