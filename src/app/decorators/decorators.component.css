@@ -1,10 +1,10 @@
-.parent{
-    border: rgb(9, 1, 15) ;
+.child{
+    border: blueviolet ;
     border-width: thick;
-    border-style:double;
+    border-style: dotted;
     margin:20px ; padding: 20px;
 }
 h2{
     text-align: center;
-    color:green;
+    color:blue;
 }

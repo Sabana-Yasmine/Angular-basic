@@ -8,6 +8,13 @@ import { SampleService } from './service/sample.service';
 })
 export class AppComponent implements OnInit{
   title = 'my-app';
+
+  currentName = "Yasmine"
+  names =['name1'];
+  addName(newName : string)
+  {
+    this.names.push(newName);
+  }
   constructor(public sample : SampleService){
     
   }
