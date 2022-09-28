@@ -1,0 +1,73 @@
+<h2 class="text-center">PIPE DEMO</h2>
+<div>
+    <h5>Date and Time</h5>
+    <ul>
+   <li>{{day}}</li> 
+   <li> {{day | date }}</li>
+   <li>{{day | date :'dd-MM-yy  hh:mm:ss a'}}</li>
+   <li> {{day | date:'MMMM,d,yyyy,EEEE' }}</li>
+ </ul>
+</div>
+<div>
+    <h5>String</h5>
+    <ul>
+        <li>Name: {{name}}</li>
+        <li>{{name | uppercase}}</li>
+        <li>{{name | lowercase}}</li>
+        <li>{{name | titlecase}}</li>
+        
+    </ul>
+</div>
+<div>
+    <h5>Number</h5>
+    <ul>
+        <li>{{num}}</li>
+        <li>{{num | number}}</li>
+        <li>{{num | number:'5.4-5'}}</li>
+
+    </ul>
+</div>
+<div>
+    <h5>Percentage</h5>
+    <ul>
+        <li>{{percentage}}</li>
+        <li>{{percentage | percent}}</li>
+        <li>{{percentage | percent:'3.2-3'}}</li>
+    </ul>
+</div>
+<div>
+    <h5>Currency</h5>
+    <ul>
+        <li>{{currency}}</li>
+        <li>{{currency | currency}}</li>
+        <li>{{currency | currency:'CAD'}}</li>
+        <li>{{currency | currency:'INR':'Rs'}}</li>
+        <li>{{currency | currency:'ERU'}}</li>
+        <li>{{currency | currency:'CAD':'symbol-narrow'}}</li>
+    </ul>
+</div>
+<div>
+    <h5>Objects</h5>
+    <ul>
+        <li>{{object}}</li>
+        <li>{{object | json}}</li>
+        <li>{{object | keyvalue}}</li>
+        <li>{{object | keyvalue | json}}</li>
+        <li>{{object | keyvalue | json | uppercase}}</li>
+    </ul>
+</div>
+<div>
+    <h5>Array</h5>
+    <ul>
+        <li>{{array}}</li>
+        <li>{{array | slice: 1:5}}</li>
+        <li>{{array | slice: 5}}</li>
+        <li>{{array | slice: -3}}</li>
+    </ul>
+</div>
+<div>
+    <h5>Custom Pipe</h5>
+    <ul>
+        <li>{{'My name is' | append |uppercase}}</li>
+    </ul>
+</div>

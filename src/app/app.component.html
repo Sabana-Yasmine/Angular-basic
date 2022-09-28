@@ -1,12 +1,15 @@
-<div class="parent">
-    <h2>Parent Component</h2>
-    <ul>
-        <li *ngFor="let n of names">{{n}}</li>
-    </ul>
-    <app-decorators [name]="currentName" (newNameEvent)="addName($event)"></app-decorators>
-</div>
+<app-pipe></app-pipe>
 
-<!--<app-login></app-login>
+<div class="d-none">
+    <div class="parent">
+        <h2>Parent Component</h2>
+        <ul>
+            <li *ngFor="let n of names">{{n}}</li>
+        </ul>
+        <app-decorators [name]="currentName" (newNameEvent)="addName($event)"></app-decorators>
+    </div>
+
+    <app-login></app-login>
 <app-binding></app-binding>
 <app-directives></app-directives>
 <app-sample></app-sample>
@@ -23,4 +26,5 @@
 </div>
 <ng-template #logout>
    <app-login></app-login>
-</ng-template>-->
+</ng-template>
+</div>

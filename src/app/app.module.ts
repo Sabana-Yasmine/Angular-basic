@@ -9,7 +9,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SampleComponent } from './sample/sample.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
-import { DecoratorsComponent } from './decorators/decorators.component'
+import { DecoratorsComponent } from './decorators/decorators.component';
+import { PipeComponent } from './pipe/pipe.component'
+import { AppendPipe } from './pipe/custom.pipe';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { DecoratorsComponent } from './decorators/decorators.component'
     DirectivesComponent,
     SampleComponent,
     LogoutComponent,
-    DecoratorsComponent   
+    DecoratorsComponent,
+    PipeComponent   ,
+    AppendPipe
   ],
   imports: [
     BrowserModule,
